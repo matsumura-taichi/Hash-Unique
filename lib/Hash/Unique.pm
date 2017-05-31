@@ -8,16 +8,29 @@ our $VERSION = "0.01";
 sub unique {
   (my $array_hash, my $key) = @_;
 
-  my %tmp;
+  my $tmp;
   my $return_hash;
 
   foreach my $hash (@{$array_hash}) {
-    next if defined $tmp{$hash->{$key}};
-    push @{$return_hash}, $hash;
-    $tmp{$hash->{$key}} ++;
+    if (!in_array($hash->{$key}, $tmp)) {
+      push (@{$return_hash}, $hash);
+      push (@{$tmp}, $hash->{$key});
+    }
   }
 
   return $return_hash;
+}
+
+sub in_array {
+  (my $val, my $array_ref) = @_;
+
+  foreach my $elem (@{$array_ref}) {
+    if ($val eq $elem) {
+      return 1;
+    }
+  }
+
+  return 0;
 }
 
 1;
