@@ -5,7 +5,20 @@ use warnings;
 
 our $VERSION = "0.01";
 
+sub unique {
+  (my $array_hash, my $key) = @_;
 
+  my %tmp;
+  my $return_hash;
+
+  foreach my $hash (@{$array_hash}) {
+    next if defined $tmp{$hash->{$key}};
+    push @{$return_hash}, $hash;
+    $tmp{$hash->{$key}} ++;
+  }
+
+  return $return_hash;
+}
 
 1;
 __END__
