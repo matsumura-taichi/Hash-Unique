@@ -5,7 +5,7 @@ use warnings;
 
 our $VERSION = "0.01";
 
-sub unique {
+sub get_unique_hash {
   (my $array_hash, my $key) = @_;
 
   my $tmp;
