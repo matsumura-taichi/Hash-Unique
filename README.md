@@ -6,7 +6,7 @@ Hash::Unique - It's hash manipulation module
 
 ### get\_unique\_hash
 
-This subroutine makes 2 dimensional hashes unique by specified key.
+This subroutine makes hash-array unique by specified key.
 
 #### way to use
 

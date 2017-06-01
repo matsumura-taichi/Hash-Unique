@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
 
 sub get_unique_hash {
   (my $array_hash, my $key) = @_;
@@ -46,7 +46,7 @@ Hash::Unique - It's hash manipulation module
 
 =head3 get_unique_hash
 
-This subroutine makes 2 dimensional hashes unique by specified key.
+This subroutine makes hash-array unique by specified key.
 
 =head4 way to use
 
