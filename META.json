@@ -52,5 +52,16 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/matsumura-taichi/Hash-Unique/issues"
+      },
+      "homepage" : "https://github.com/matsumura-taichi/Hash-Unique",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/matsumura-taichi/Hash-Unique.git",
+         "web" : "https://github.com/matsumura-taichi/Hash-Unique"
+      }
+   },
    "version" : "0.01"
 }
