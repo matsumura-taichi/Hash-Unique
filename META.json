@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "It's hash manipulation module",
    "author" : [
       "matsumura-taichi <hiroto.in.the.cromagnons@gmail.com>"
    ],
@@ -63,5 +63,5 @@
          "web" : "https://github.com/matsumura-taichi/Hash-Unique"
       }
    },
-   "version" : "0.02"
+   "version" : "0.03"
 }

@@ -3,7 +3,7 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 sub get_unique_hash {
   (my $array_hash, my $key) = @_;
@@ -40,15 +40,36 @@ __END__
 
 =head1 NAME
 
-Hash::Unique - It's new $module
-
-=head1 SYNOPSIS
-
-    use Hash::Unique;
+Hash::Unique - It's hash manipulation module
 
 =head1 DESCRIPTION
 
-Hash::Unique is ...
+=head3 get_unique_hash
+
+This subroutine makes 2 dimensional hashes unique by specified key.
+
+=head4 way to use
+
+ use Hash::Unique;
+
+ my $hashes = [
+   {id => 1, name => 'tanaka'},
+   {id => 2, name => 'sato'},
+   {id => 3, name => 'suzuki'},
+   {id => 4, name => 'tanaka'}
+ ];
+
+ my $unique_hash = &get_unique_hash($hashes, "name");
+
+=head4 result
+
+Contents of "$unique_hash"
+
+ [
+  {id => 1, name => 'tanaka'},
+  {id => 2, name => 'sato'},
+  {id => 3, name => 'suzuki'}
+ ]
 
 =head1 LICENSE
 
