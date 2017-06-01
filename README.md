@@ -12,24 +12,24 @@ This subroutine makes 2 dimensional hashes unique by specified key.
 
     use Hash::Unique;
 
-    my $hashes = [
+    my @hash_array = (
       {id => 1, name => 'tanaka'},
       {id => 2, name => 'sato'},
       {id => 3, name => 'suzuki'},
       {id => 4, name => 'tanaka'}
-    ];
+    );
 
-    my $unique_hash = &get_unique_hash($hashes, "name");
+    my @unique_hash_array = Hash::Unique->get_unique_hash(\@hash_array, "name");
 
 #### result
 
-Contents of "$unique\_hash"
+Contents of "@unique\_hash\_array"
 
-    [
+    (
      {id => 1, name => 'tanaka'},
      {id => 2, name => 'sato'},
      {id => 3, name => 'suzuki'}
-    ]
+    )
 
 # LICENSE
 

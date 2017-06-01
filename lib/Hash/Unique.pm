@@ -3,28 +3,28 @@ use 5.008001;
 use strict;
 use warnings;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub get_unique_hash {
   (my $array_hash, my $key) = @_;
 
-  my $tmp;
-  my $return_hash;
+  my @tmp;
+  my @return_hash = ();
 
-  foreach my $hash (@{$array_hash}) {
-    if (!in_array($hash->{$key}, $tmp)) {
-      push (@{$return_hash}, $hash);
-      push (@{$tmp}, $hash->{$key});
+  foreach my $hash (@$array_hash) {
+    if (!in_array($hash->{$key}, \@tmp)) {
+      push (@return_hash, $hash);
+      push (@tmp, $hash->{$key});
     }
   }
 
-  return $return_hash;
+  return @return_hash;
 }
 
 sub in_array {
   (my $val, my $array_ref) = @_;
 
-  foreach my $elem (@{$array_ref}) {
+  foreach my $elem (@$array_ref) {
     if ($val eq $elem) {
       return 1;
     }
@@ -52,24 +52,24 @@ This subroutine makes 2 dimensional hashes unique by specified key.
 
  use Hash::Unique;
 
- my $hashes = [
+ my @hash_array = (
    {id => 1, name => 'tanaka'},
    {id => 2, name => 'sato'},
    {id => 3, name => 'suzuki'},
    {id => 4, name => 'tanaka'}
- ];
+ );
 
- my $unique_hash = &get_unique_hash($hashes, "name");
+ my @unique_hash_array = Hash::Unique->get_unique_hash(\@hash_array, "name");
 
 =head4 result
 
-Contents of "$unique_hash"
+Contents of "@unique_hash_array"
 
- [
+ (
   {id => 1, name => 'tanaka'},
   {id => 2, name => 'sato'},
   {id => 3, name => 'suzuki'}
- ]
+ )
 
 =head1 LICENSE
 
