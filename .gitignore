@@ -27,5 +27,6 @@ cover_db/
 /_build_params
 
 MYMETA.*
+.vstags
 
 /Hash-Unique-*

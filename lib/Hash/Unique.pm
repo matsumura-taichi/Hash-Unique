@@ -1,12 +1,11 @@
 package Hash::Unique;
-use 5.008001;
 use strict;
 use warnings;
 
 our $VERSION = "0.05";
 
 sub get_unique_hash {
-  (my $array_hash, my $key) = @_;
+  my ($array_hash, $key) = @_;
 
   my @tmp;
   my @return_hash = ();
@@ -22,7 +21,7 @@ sub get_unique_hash {
 }
 
 sub in_array {
-  (my $val, my $array_ref) = @_;
+  my ($val, $array_ref) = @_;
 
   foreach my $elem (@$array_ref) {
     if ($val eq $elem) {
