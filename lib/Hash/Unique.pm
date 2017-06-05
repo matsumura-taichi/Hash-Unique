@@ -5,6 +5,7 @@ use warnings;
 our $VERSION = "0.05";
 
 sub get_unique_hash {
+  my $class = shift;
   my ($array_hash, $key) = @_;
 
   my @tmp;
