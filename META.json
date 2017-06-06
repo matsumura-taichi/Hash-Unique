@@ -63,5 +63,9 @@
          "web" : "https://github.com/matsumura-taichi/Hash-Unique"
       }
    },
-   "version" : "0.05"
+   "version" : "0.06",
+   "x_contributors" : [
+      "K <x00.x7f@gmail.com>"
+   ],
+   "x_static_install" : 1
 }

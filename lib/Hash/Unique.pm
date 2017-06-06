@@ -2,7 +2,7 @@ package Hash::Unique;
 use strict;
 use warnings;
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 sub get_unique_hash {
   my $class = shift;
