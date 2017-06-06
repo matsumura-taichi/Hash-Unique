@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "It's hash manipulation module",
    "author" : [
       "matsumura-taichi <hiroto.in.the.cromagnons@gmail.com>"
    ],
@@ -52,5 +52,16 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/matsumura-taichi/Hash-Unique/issues"
+      },
+      "homepage" : "https://github.com/matsumura-taichi/Hash-Unique",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/matsumura-taichi/Hash-Unique.git",
+         "web" : "https://github.com/matsumura-taichi/Hash-Unique"
+      }
+   },
+   "version" : "0.05"
 }
